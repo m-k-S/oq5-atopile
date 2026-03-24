@@ -1,0 +1,22 @@
+#pragma experiment("TRAITS")
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component onsemi_NCP5663DSADJR4G_package:
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C719795", date="2026-03-24T20:50:16.667247+00:00", checksum="fe01bdce6706f0987a0783c8342781ff4faa77b8f4d7a9b7ffc821543d7d5feb">
+
+    trait is_atomic_part<manufacturer="onsemi", partnumber="NCP5663DSADJR4G", footprint="D2PAK-5_L10.0-W9.2-P1.70-LS14.5-BR.kicad_mod", symbol="NCP5663DSADJR4G.kicad_sym", model="D2PAK-5_L10.0-W9.2-P1.70-LS14.5-BR.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C719795", manufacturer="onsemi", partno="NCP5663DSADJR4G">
+    trait has_designator_prefix<prefix="U">
+
+    # pins
+    signal Adj ~ pin 5
+    signal EP ~ pin 6
+    signal Enable ~ pin 1
+    signal GND ~ pin 3
+    signal VIN ~ pin 2
+    signal Vout ~ pin 4

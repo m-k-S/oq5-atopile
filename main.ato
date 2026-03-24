@@ -1,4 +1,7 @@
 """Brand new atopile project!"""
 
+from "atopile/ti-tpsm863257/ti-tpsm863257.ato" import TPSM863257
+from "parts/onsemi_NCP5663DSADJR4G/onsemi_NCP5663DSADJR4G.ato" import onsemi_NCP5663DSADJR4G_package
+
 module App:
     pass

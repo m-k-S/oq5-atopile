@@ -1,0 +1,10 @@
+(fp_lib_table
+    (version 7)
+    (lib
+        (name "onsemi_NCP5663DSADJR4G")
+        (type "KiCad")
+        (uri "${KIPRJMOD}/../../parts/onsemi_NCP5663DSADJR4G")
+        (options "")
+        (descr "atopile: part lib: onsemi_NCP5663DSADJR4G")
+    )
+)
