@@ -133,4 +133,11 @@
 		(options "")
 		(descr "atopile: part lib: RFENABLE")
 	)
+	(lib
+		(name "VTUNE")
+		(type "KiCad")
+		(uri "${KIPRJMOD}/../../parts/VTUNE")
+		(options "")
+		(descr "atopile: part lib: VTUNE")
+	)
 )
