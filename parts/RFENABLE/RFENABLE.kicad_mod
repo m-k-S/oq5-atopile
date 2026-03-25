@@ -1,0 +1,416 @@
+(footprint "RFENABLE:RFENABLE"
+	(version 20241229)
+	(generator "custom")
+	(generator_version "1.0")
+	(layer "F.Cu")
+	(uuid "a1b2c3d4-e5f6-7890-abcd-ef0123456789")
+	(property "Reference" "REF**"
+		(at -16 -14.5)
+		(layer "F.SilkS")
+		(uuid "b1c2d3e4-f5a6-7890-abcd-ef0123456780")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "RFENABLE"
+		(at -16 14.5)
+		(layer "F.Fab")
+		(uuid "c1d2e3f4-a5b6-7890-abcd-ef0123456781")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	;; Board outline on F.Fab layer
+	;; Segment P24→P1
+	(fp_line
+		(start -29.21 -12.704)
+		(end -32.385 -12.704)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000001")
+	)
+	;; Arc P1→P2 (top-left corner)
+	(fp_arc
+		(start -32.385 -12.704)
+		(mid -34.181 -11.96)
+		(end -34.925 -10.164)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000002")
+	)
+	;; Segment P2→P3
+	(fp_line
+		(start -34.925 -10.164)
+		(end -34.925 10.156)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000003")
+	)
+	;; Arc P3→P4 (bottom-left corner)
+	(fp_arc
+		(start -34.925 10.156)
+		(mid -34.181 11.952)
+		(end -32.385 12.696)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000004")
+	)
+	;; Segment P4→P5
+	(fp_line
+		(start -32.385 12.696)
+		(end -29.21 12.696)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000005")
+	)
+	;; Segment P5→P6
+	(fp_line
+		(start -29.21 12.696)
+		(end -29.21 12.188)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000006")
+	)
+	;; Segment P6→P7
+	(fp_line
+		(start -29.21 12.188)
+		(end -19.431 12.188)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000007")
+	)
+	;; Segment P7→P8
+	(fp_line
+		(start -19.431 12.188)
+		(end -19.431 12.696)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000008")
+	)
+	;; Segment P8→P9
+	(fp_line
+		(start -19.431 12.696)
+		(end -13.589 12.696)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000009")
+	)
+	;; Segment P9→P10
+	(fp_line
+		(start -13.589 12.696)
+		(end -13.589 12.188)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-00000000000a")
+	)
+	;; Segment P10→P11
+	(fp_line
+		(start -13.589 12.188)
+		(end -3.81 12.188)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-00000000000b")
+	)
+	;; Segment P11→P12
+	(fp_line
+		(start -3.81 12.188)
+		(end -3.81 12.696)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-00000000000c")
+	)
+	;; Segment P12→P13
+	(fp_line
+		(start -3.81 12.696)
+		(end -0.635 12.696)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-00000000000d")
+	)
+	;; Arc P13→P14 (bottom-right corner)
+	(fp_arc
+		(start -0.635 12.696)
+		(mid 1.161 11.952)
+		(end 1.905 10.156)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-00000000000e")
+	)
+	;; Segment P14→P15
+	(fp_line
+		(start 1.905 10.156)
+		(end 1.905 -10.164)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-00000000000f")
+	)
+	;; Arc P15→P16 (top-right corner)
+	(fp_arc
+		(start 1.905 -10.164)
+		(mid 1.161 -11.96)
+		(end -0.635 -12.704)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000010")
+	)
+	;; Segment P16→P17
+	(fp_line
+		(start -0.635 -12.704)
+		(end -3.81 -12.704)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000011")
+	)
+	;; Segment P17→P18
+	(fp_line
+		(start -3.81 -12.704)
+		(end -3.81 -11.688)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000012")
+	)
+	;; Segment P18→P19
+	(fp_line
+		(start -3.81 -11.688)
+		(end -13.589 -11.688)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000013")
+	)
+	;; Segment P19→P20
+	(fp_line
+		(start -13.589 -11.688)
+		(end -13.589 -12.704)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000014")
+	)
+	;; Segment P20→P21
+	(fp_line
+		(start -13.589 -12.704)
+		(end -19.431 -12.704)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000015")
+	)
+	;; Segment P21→P22
+	(fp_line
+		(start -19.431 -12.704)
+		(end -19.431 -11.688)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000016")
+	)
+	;; Segment P22→P23
+	(fp_line
+		(start -19.431 -11.688)
+		(end -29.21 -11.688)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000017")
+	)
+	;; Segment P23→P24
+	(fp_line
+		(start -29.21 -11.688)
+		(end -29.21 -12.704)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000018")
+	)
+	;; Inner component outline (rectangle with X)
+	(fp_line
+		(start -22.245 4.996)
+		(end -24.745 4.996)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-000000000019")
+	)
+	(fp_line
+		(start -24.745 4.996)
+		(end -24.745 -5.004)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-00000000001a")
+	)
+	(fp_line
+		(start -24.745 -5.004)
+		(end -22.245 -5.004)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-00000000001b")
+	)
+	(fp_line
+		(start -22.245 -5.004)
+		(end -22.245 4.996)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-00000000001c")
+	)
+	(fp_line
+		(start -22.245 4.996)
+		(end -24.745 -5.004)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-00000000001d")
+	)
+	(fp_line
+		(start -24.745 4.996)
+		(end -22.245 -5.004)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d0000001-0000-0000-0000-00000000001e")
+	)
+	;; Courtyard
+	(fp_rect
+		(start -35.5 -13.2)
+		(end 2.5 13.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d0000001-0000-0000-0000-00000000001f")
+	)
+	;; Header pin pads (active electrical connections)
+	(pad "1" thru_hole circle
+		(at 0 -1.655)
+		(size 1.7 1.7)
+		(drill 1.0)
+		(layers "*.Cu" "*.Mask")
+		(uuid "d0000001-0000-0000-0000-000000000020")
+	)
+	(pad "2" thru_hole circle
+		(at 0 1.655)
+		(size 1.7 1.7)
+		(drill 1.0)
+		(layers "*.Cu" "*.Mask")
+		(uuid "d0000001-0000-0000-0000-000000000021")
+	)
+	;; M2.5 mounting holes (NPTH)
+	(pad "" np_thru_hole circle
+		(at -32.385 -10.164)
+		(size 2.75 2.75)
+		(drill 2.75)
+		(layers "*.Cu" "*.Mask")
+		(uuid "d0000001-0000-0000-0000-000000000022")
+	)
+	(pad "" np_thru_hole circle
+		(at -32.385 10.156)
+		(size 2.75 2.75)
+		(drill 2.75)
+		(layers "*.Cu" "*.Mask")
+		(uuid "d0000001-0000-0000-0000-000000000023")
+	)
+	(pad "" np_thru_hole circle
+		(at -0.635 -10.164)
+		(size 2.75 2.75)
+		(drill 2.75)
+		(layers "*.Cu" "*.Mask")
+		(uuid "d0000001-0000-0000-0000-000000000024")
+	)
+	(pad "" np_thru_hole circle
+		(at -0.635 10.156)
+		(size 2.75 2.75)
+		(drill 2.75)
+		(layers "*.Cu" "*.Mask")
+		(uuid "d0000001-0000-0000-0000-000000000025")
+	)
+	(embedded_fonts no)
+)

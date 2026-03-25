@@ -119,4 +119,18 @@
 		(options "")
 		(descr "atopile: part lib: Phoenix_Contact_1729128")
 	)
+	(lib
+		(name "Omron_Electronics_XM3B_1522_502")
+		(type "KiCad")
+		(uri "${KIPRJMOD}/../../parts/Omron_Electronics_XM3B_1522_502")
+		(options "")
+		(descr "atopile: part lib: Omron_Electronics_XM3B_1522_502")
+	)
+	(lib
+		(name "RFENABLE")
+		(type "KiCad")
+		(uri "${KIPRJMOD}/../../parts/RFENABLE")
+		(options "")
+		(descr "atopile: part lib: RFENABLE")
+	)
 )

@@ -1,0 +1,866 @@
+(kicad_symbol_lib
+	(version 20241229)
+	(generator "faebryk_convert")
+	(symbol "XM3B-1522-502"
+		(property "Reference" "DSub"
+			(id 0)
+			(at 0 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "XM3B-1522-502"
+			(id 1)
+			(at 0 -22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "C231481:DSUB-TH_15P-P2.74-S2.84_L18.5-W39.1-M"
+			(id 2)
+			(at 0 -25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Others_Omron-Electronics_XM3B-1522-502_Omron-Electronics-XM3B-1522-502_C231481.html"
+			(id 3)
+			(at 0 -27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C231481"
+			(id 5)
+			(at 0 -30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(in_bom yes)
+		(on_board yes)
+		(symbol "XM3B-1522-502_0_1"
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -3.3 12.7) (xy -5.08 12.7)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -3.3 17.78) (xy -5.08 17.78)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -3.3 7.62) (xy -5.08 7.62)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -5.08 15.24) (xy -0.76 15.24)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -3.3 2.54) (xy -5.08 2.54)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -5.08 10.16) (xy -0.76 10.16)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -3.3 -2.54) (xy -5.08 -2.54)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -5.08 5.08) (xy -0.76 5.08)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -5.08 -0) (xy -0.76 -0)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -5.08 -2.54) (xy -5.08 17.78)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy 2.54 -17.78) (xy 2.54 17.78)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -5.08 19.56) (xy -5.08 17.78)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy 1.52 19.05) (xy -3.81 20.32)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -5.08 -19.56) (xy -5.08 -2.54)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy 1.52 -19.05) (xy -3.81 -20.32)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -3.3 -7.62) (xy -5.08 -7.62)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -3.3 -12.7) (xy -5.08 -12.7)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -5.08 -5.08) (xy -0.76 -5.08)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -3.3 -17.78) (xy -5.08 -17.78)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -5.08 -10.16) (xy -0.76 -10.16)
+				)
+			)
+			(polyline
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+				(pts
+					(xy -5.08 -15.24) (xy -0.76 -15.24)
+				)
+			)
+			(circle
+				(center 0 -0)
+				(end 0.76 -0)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 5.08)
+				(end 0.76 5.08)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 10.16)
+				(end 0.76 10.16)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 15.24)
+				(end 0.76 15.24)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center -2.54 -2.54)
+				(end -1.78 -2.54)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center -2.54 2.54)
+				(end -1.78 2.54)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center -2.54 7.62)
+				(end -1.78 7.62)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center -2.54 12.7)
+				(end -1.78 12.7)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center -2.54 17.78)
+				(end -1.78 17.78)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 -15.24)
+				(end 0.76 -15.24)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 -10.16)
+				(end 0.76 -10.16)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 -5.08)
+				(end 0.76 -5.08)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center -2.54 -17.78)
+				(end -1.78 -17.78)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center -2.54 -12.7)
+				(end -1.78 -12.7)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center -2.54 -7.62)
+				(end -1.78 -7.62)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 2.54 17.78)
+				(mid 2.24 16.96)
+				(end 1.62 19)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -3.69 20.27)
+				(mid -4.96 20.04)
+				(end -5.07 19.47)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 1.6 -19.01)
+				(mid 2.51 -18.03)
+				(end 2.54 -17.78)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -5.07 -19.47)
+				(mid -4.96 -19.08)
+				(end -3.69 -20.27)
+				(stroke
+					(width 0)
+					(type default)
+					(color 0 0 0 0)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin input line
+				(at -10.16 17.78 0)
+				(length 5.08)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 12.7 0)
+				(length 5.08)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 7.62 0)
+				(length 5.08)
+				(name "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 2.54 0)
+				(length 5.08)
+				(name "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 -2.54 0)
+				(length 5.08)
+				(name "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 15.24 0)
+				(length 5.08)
+				(name "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 10.16 0)
+				(length 5.08)
+				(name "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 5.08 0)
+				(length 5.08)
+				(name "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 7.62 17.78 180)
+				(length 5.08)
+				(name "MH2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 7.62 -17.78 180)
+				(length 5.08)
+				(name "MH1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 -7.62 0)
+				(length 5.08)
+				(name "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 -12.7 0)
+				(length 5.08)
+				(name "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 -17.78 0)
+				(length 5.08)
+				(name "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 -0 0)
+				(length 5.08)
+				(name "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 -5.08 0)
+				(length 5.08)
+				(name "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 -10.16 0)
+				(length 5.08)
+				(name "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 -15.24 0)
+				(length 5.08)
+				(name "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+	)
+)

@@ -1,0 +1,33 @@
+#pragma experiment("TRAITS")
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component Omron_Electronics_XM3B_1522_502_package:
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C231481", date="2026-03-25T01:51:29.369416+00:00", checksum="2bffd357b8bdf7c8a52aa6bb470825164b4f7363345dc79c07970e88fd589b4d">
+
+    trait is_atomic_part<manufacturer="Omron Electronics", partnumber="XM3B-1522-502", footprint="DSUB-TH_15P-P2.74-S2.84_L18.5-W39.1-M.kicad_mod", symbol="XM3B-1522-502.kicad_sym", model="DSUB-TH_15P-P2.74-S2.84_L18.5-W39.1-H12.5-M.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C231481", manufacturer="Omron Electronics", partno="XM3B-1522-502">
+    trait has_designator_prefix<prefix="DSub">
+
+    # pins
+    signal p1 ~ pin 1
+    signal p2 ~ pin 2
+    signal p3 ~ pin 3
+    signal p4 ~ pin 4
+    signal p5 ~ pin 5
+    signal p6 ~ pin 6
+    signal p7 ~ pin 7
+    signal p8 ~ pin 8
+    signal p9 ~ pin 9
+    signal p10 ~ pin 10
+    signal p11 ~ pin 11
+    signal p12 ~ pin 12
+    signal p13 ~ pin 13
+    signal p14 ~ pin 14
+    signal p15 ~ pin 15
+    signal MH1 ~ pin 0
+    signal MH2 ~ pin 0

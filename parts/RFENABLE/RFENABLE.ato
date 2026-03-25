@@ -1,0 +1,11 @@
+#pragma experiment("TRAITS")
+import has_designator_prefix
+import is_atomic_part
+
+component RFENABLE_package:
+    """RFENABLE Daughterboard - 2-pin header interface with M2.5 mounting"""
+    trait is_atomic_part<manufacturer="Custom", partnumber="RFENABLE", footprint="RFENABLE.kicad_mod", symbol="RFENABLE.kicad_sym:RFENABLE">
+    trait has_designator_prefix<prefix="J">
+
+    signal p1 ~ pin "1"
+    signal p2 ~ pin "2"

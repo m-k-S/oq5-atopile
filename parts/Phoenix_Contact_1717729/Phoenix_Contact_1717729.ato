@@ -16,5 +16,5 @@ component Phoenix_Contact_1717729_package:
     trait has_datasheet<datasheet="https://www.lcsc.com/datasheet/lcsc_datasheet_1810161729_Phoenix-Contact-1717729_C89117.pdf">
 
     # pins
-    pin 1
-    pin 2
+    signal p1 ~ pin 1
+    signal p2 ~ pin 2

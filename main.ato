@@ -7,6 +7,9 @@ from "ti-tpsm863252.ato" import TPSM863252_7V
 from "ncp5663.ato" import NCP5663_7V
 from "ncp5663.ato" import NCP5663_5V
 from "koheron.ato" import KoheronLaserDriver
+from "parts/Phoenix_Contact_1717729/Phoenix_Contact_1717729.ato" import Phoenix_Contact_1717729_package
+from "parts/Phoenix_Contact_1729128/Phoenix_Contact_1729128.ato" import Phoenix_Contact_1729128_package
+from "parts/Omron_Electronics_XM3B_1522_502/Omron_Electronics_XM3B_1522_502.ato" import Omron_Electronics_XM3B_1522_502_package
 
 import ElectricPower
 
@@ -71,3 +74,36 @@ module App:
     # Thermistor signals
     signal th_p ~ koheron.th_p
     signal th_n ~ koheron.th_n
+
+    # === 15V Input Terminal (Phoenix 1717729, 7.62mm pitch) ===
+    j_15v_in = new Phoenix_Contact_1717729_package
+    j_15v_in.p1 ~ power_15v.hv
+    j_15v_in.p2 ~ power_15v.lv
+
+    # === DPS5005 Output Terminals (Phoenix 1729128, 5.08mm pitch) ===
+    j_dps5005_1 = new Phoenix_Contact_1729128_package
+    signal dps5005_1 ~ j_dps5005_1.p1
+    j_dps5005_1.p2 ~ power_15v.lv
+
+    j_dps5005_2 = new Phoenix_Contact_1729128_package
+    signal dps5005_2 ~ j_dps5005_2.p1
+    j_dps5005_2.p2 ~ power_15v.lv
+
+    # === 5V RedPitaya Output Terminal (Phoenix 1729128, 5.08mm pitch) ===
+    j_5v_redpitaya = new Phoenix_Contact_1729128_package
+    j_5v_redpitaya.p1 ~ power_5v_redpitaya.hv
+    j_5v_redpitaya.p2 ~ power_15v.lv
+
+    # === DB15 Connector (Omron XM3B-1522-502) ===
+    db15 = new Omron_Electronics_XM3B_1522_502_package
+    db15.p1 ~ ld_p
+    db15.p2 ~ pelt_n
+    db15.p3 ~ pelt_p
+    db15.p4 ~ th_p
+    db15.p5 ~ th_n
+    db15.p7 ~ power_5v_vco.hv
+    signal vtune ~ db15.p8
+    db15.p9 ~ ld_n
+    signal rf_enable ~ db15.p15
+    db15.MH1 ~ power_15v.lv
+    db15.MH2 ~ power_15v.lv
