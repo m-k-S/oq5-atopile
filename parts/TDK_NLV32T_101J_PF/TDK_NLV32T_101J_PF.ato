@@ -1,0 +1,22 @@
+#pragma experiment("TRAITS")
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component TDK_NLV32T_101J_PF_package:
+    """100uH±5%"""
+
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C76836", date="2026-03-25T02:42:24.560477+00:00", checksum="b79948a95e263fadf24c4a45bb918bf39724c1fa11b0561a215dda1e0e567b8f">
+
+    trait is_atomic_part<manufacturer="TDK", partnumber="NLV32T-101J-PF", footprint="L1210.kicad_mod", symbol="NLV32T-101J-PF.kicad_sym", model="L1210.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C76836", manufacturer="TDK", partno="NLV32T-101J-PF">
+    trait has_designator_prefix<prefix="L">
+    trait has_datasheet<datasheet="https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_TDK-NLV32T-101J-PF_C76836.pdf">
+
+    # pins
+    pin 2
+    pin 1

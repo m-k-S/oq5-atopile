@@ -1,0 +1,35 @@
+#pragma experiment("BRIDGE_CONNECT")
+#pragma experiment("TRAITS")
+
+import Capacitor
+import Inductor
+
+module BiasTee:
+    """
+    Bias tee for combining DC and AC/RF signals.
+    DC path: inductor (passes DC, blocks AC)
+    AC path: capacitor (passes AC, blocks DC)
+
+    Lower cutoff ~32kHz (100nF into 50 ohm), upper cutoff >10MHz (inductor SRF).
+    """
+
+    signal dc_in
+    signal rf_in
+    signal output
+
+    # DC path: inductor (RF choke)
+    # 100uH provides ~31 ohm impedance at 50kHz
+    # SMD 1210 package for good SRF (typically 10-20MHz)
+    l = new Inductor
+    l.inductance = 100uH +/- 20%
+    l.package = "1210"
+
+    # AC path: coupling capacitor
+    # 100nF gives f_low = 1/(2*pi*50*100nF) ~ 32kHz
+    c = new Capacitor
+    c.capacitance = 100nF +/- 10%
+    c.package = "0603"
+
+    # Wiring: DC and RF combine at output
+    dc_in ~> l ~> output
+    rf_in ~> c ~> output

@@ -1,0 +1,23 @@
+#pragma experiment("TRAITS")
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component BAT_WIRELESS_BWSMA_KE_Z001_package:
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C496549", date="2026-03-25T02:23:36.155602+00:00", checksum="73e387da4bc427adc9057c5294f436e77155cce4419a3307ad717a44bb72ce8f">
+
+    trait is_atomic_part<manufacturer="BAT WIRELESS", partnumber="BWSMA-KE-Z001", footprint="SMA-TH_BWSMA-KE-Z001.kicad_mod", symbol="BWSMA-KE-Z001.kicad_sym", model="SMA-TH_5P-L6.5-W6.5-H9.8_BWSMA-KE-Z001.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C496549", manufacturer="BAT WIRELESS", partno="BWSMA-KE-Z001">
+    trait has_designator_prefix<prefix="RF">
+    trait has_datasheet<datasheet="https://www.lcsc.com/datasheet/lcsc_datasheet_2405210917_BAT-WIRELESS-BWSMA-KE-Z001_C496549.pdf">
+
+    # pins
+    signal sig ~ pin 1
+    signal gnd1 ~ pin 2
+    signal gnd2 ~ pin 3
+    signal gnd3 ~ pin 4
+    signal gnd4 ~ pin 5

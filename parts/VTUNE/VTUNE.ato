@@ -1,10 +1,12 @@
 #pragma experiment("TRAITS")
 import has_designator_prefix
+import has_part_picked
 import is_atomic_part
 
 component VTUNE_package:
     """VTUNE Daughterboard - 4-pin header interface with M2.5 mounting"""
     trait is_atomic_part<manufacturer="Custom", partnumber="VTUNE", footprint="VTUNE.kicad_mod", symbol="VTUNE.kicad_sym:VTUNE">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="N/A", manufacturer="Custom", partno="VTUNE">
     trait has_designator_prefix<prefix="J">
 
     signal p1 ~ pin "1"

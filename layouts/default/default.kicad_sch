@@ -1,0 +1,23 @@
+(kicad_sch
+	(version 20231120)
+	(generator "atopile")
+	(generator_version "0.14")
+	(uuid "00000000-0000-0000-0000-000000000000")
+	(paper "A3")
+	(lib_symbols)
+	(text "OpenQuantum V5 Power Supply\n\nSchematic managed by atopile.\nSee main.ato for the source of truth.\n\nNetlist is defined in the .kicad_pcb file."
+		(exclude_from_sim no)
+		(at 148.59 97.79 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "00000000-0000-0000-0000-000000000001")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

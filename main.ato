@@ -12,6 +12,8 @@ from "parts/Phoenix_Contact_1729128/Phoenix_Contact_1729128.ato" import Phoenix_
 from "parts/Omron_Electronics_XM3B_1522_502/Omron_Electronics_XM3B_1522_502.ato" import Omron_Electronics_XM3B_1522_502_package
 from "parts/RFENABLE/RFENABLE.ato" import RFENABLE_package
 from "parts/VTUNE/VTUNE.ato" import VTUNE_package
+from "bias_tee.ato" import BiasTee
+from "parts/BAT_WIRELESS_BWSMA_KE_Z001/BAT_WIRELESS_BWSMA_KE_Z001.ato" import BAT_WIRELESS_BWSMA_KE_Z001_package
 
 import ElectricPower
 
@@ -104,7 +106,7 @@ module App:
     db15.p4 ~ th_p
     db15.p5 ~ th_n
     db15.p7 ~ power_5v_vco.hv
-    signal vtune ~ db15.p8
+    signal vtune_modulated ~ db15.p8
     db15.p9 ~ ld_n
     signal rf_enable ~ db15.p15
     db15.MH1 ~ power_15v.lv
@@ -116,6 +118,21 @@ module App:
     rfenable.p2 ~ power_15v.lv
 
     # === VTUNE Daughterboard ===
+    signal vtune
     vtune_db = new VTUNE_package
     vtune_db.p3 ~ vtune
     vtune_db.p4 ~ power_15v.lv
+
+    # === Bias Tee (DC + RF combining for VCO tuning) ===
+    bias_tee = new BiasTee
+    bias_tee.dc_in ~ vtune
+    signal vtune_mod ~ bias_tee.rf_in
+    vtune_modulated ~ bias_tee.output
+
+    # === SMA Connector (RF input for vtune modulation) ===
+    sma = new BAT_WIRELESS_BWSMA_KE_Z001_package
+    sma.sig ~ vtune_mod 
+    sma.gnd1 ~ power_15v.lv
+    sma.gnd2 ~ power_15v.lv
+    sma.gnd3 ~ power_15v.lv
+    sma.gnd4 ~ power_15v.lv

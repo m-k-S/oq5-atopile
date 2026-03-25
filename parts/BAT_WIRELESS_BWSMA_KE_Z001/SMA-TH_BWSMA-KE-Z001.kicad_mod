@@ -1,0 +1,148 @@
+(footprint "BAT_WIRELESS_BWSMA_KE_Z001:SMA-TH_BWSMA-KE-Z001"
+	(version 20241229)
+	(generator "faebryk_convert")
+	(generator_version "v5")
+	(layer "F.Cu")
+	(tedit "5DC5F6A4")
+	(uuid "a528be7d-d3c2-48ff-94e7-4c87b72fc9c1")
+	(property "Reference" "REF**"
+		(at 0 -6.55)
+		(layer "F.SilkS")
+		(uuid "cb721ffc-f244-4e0b-b6f1-f988e5caf524")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SMA-TH_BWSMA-KE-Z001"
+		(at 0 6.55)
+		(layer "F.Fab")
+		(uuid "692d2eee-93a1-4607-8e96-447a77c4aae5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center -3.25 3.25)
+		(end -3.22 3.25)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(locked no)
+		(uuid "23e11c3f-7ace-4703-a370-7dd0bd830085")
+	)
+	(fp_circle
+		(center -0 -0)
+		(end 0.21 -0)
+		(stroke
+			(width 0.42)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(locked no)
+		(uuid "3d24f8a9-8cb8-419d-901f-470dd66fb061")
+	)
+	(fp_line
+		(start -1.32 3.25)
+		(end 1.31 3.25)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "a2f5b1b2-f84c-4076-bbca-0ee7b352c45d")
+	)
+	(fp_line
+		(start -3.25 -1.32)
+		(end -3.25 1.31)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "dcf7f4f3-b6ac-4207-b11e-a2bcc8806366")
+	)
+	(fp_line
+		(start 1.31 -3.25)
+		(end -1.32 -3.25)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "de4324c1-3474-4f46-b2f1-86d64574a563")
+	)
+	(fp_line
+		(start 3.25 1.31)
+		(end 3.25 -1.32)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "2643e636-c588-45d3-8802-b363ec1dbc38")
+	)
+	(pad "1" thru_hole circle
+		(at -2.55 2.55 0)
+		(size 2.2 2.2)
+		(drill 1.5000224)
+		(layers "*.Cu" "*.Mask")
+		(uuid "0c361bf0-a5f9-4c94-bd4e-a38dfb3e1411")
+	)
+	(pad "2" thru_hole circle
+		(at -2.55 -2.55 0)
+		(size 2.2 2.2)
+		(drill 1.5000224)
+		(layers "*.Cu" "*.Mask")
+		(uuid "77a67ad3-37f5-47ff-9d27-9ebd6df212d8")
+	)
+	(pad "3" thru_hole circle
+		(at 2.55 -2.55 0)
+		(size 2.2 2.2)
+		(drill 1.5000224)
+		(layers "*.Cu" "*.Mask")
+		(uuid "f703434b-9bc8-49b8-81e4-7c5afa2a79c6")
+	)
+	(pad "4" thru_hole circle
+		(at 2.55 2.55 0)
+		(size 2.2 2.2)
+		(drill 1.5000224)
+		(layers "*.Cu" "*.Mask")
+		(uuid "d9848a36-b1d6-4d6f-8070-5e7f43e0e73b")
+	)
+	(pad "5" thru_hole circle
+		(at -0 -0 0)
+		(size 2 2)
+		(drill 1.35001)
+		(layers "*.Cu" "*.Mask")
+		(uuid "8bc77de3-1e0a-49ab-afd0-cdaac297a30e")
+	)
+	(model "${KIPRJMOD}/../../parts/BAT_WIRELESS_BWSMA_KE_Z001/SMA-TH_5P-L6.5-W6.5-H9.8_BWSMA-KE-Z001.step"
+		(offset
+			(xyz 0 -0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(embedded_fonts no)
+)
