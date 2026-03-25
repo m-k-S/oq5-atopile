@@ -1,0 +1,101 @@
+#pragma experiment("MODULE_TEMPLATING")
+#pragma experiment("FOR_LOOP")
+#pragma experiment("BRIDGE_CONNECT")
+#pragma experiment("TRAITS")
+
+import Capacitor
+import Resistor
+import Regulator
+import ElectricPower
+import ElectricLogic
+import has_single_electric_reference
+
+from "parts/onsemi_NCP5663DSADJR4G/onsemi_NCP5663DSADJR4G.ato" import onsemi_NCP5663DSADJR4G_package
+
+module NCP5663 from Regulator:
+    """
+    onsemi NCP5663DSADJR4G Adjustable LDO Regulator
+    Up to 20V input, 1.25V reference, up to 3A output.
+    Low noise output suitable for sensitive analog supplies.
+    """
+
+    # --- Parameters ---
+    assert power_in.voltage within 2V to 20V
+    assert power_out.voltage within 1.25V to 19V
+    assert power_out.max_current <= 3A
+
+    # Ensure LDO headroom
+    assert power_in.voltage >= power_out.voltage
+
+    # --- External interfaces ---
+    enable = new ElectricLogic
+    """Enable pin. Drive high to turn on. Has internal pulldown;
+    module includes pullup for default-on operation."""
+
+    # --- Package ---
+    package = new onsemi_NCP5663DSADJR4G_package
+
+    # --- Input decoupling capacitor ---
+    input_cap = new Capacitor
+    input_cap.capacitance = 10uF +/- 20%
+    input_cap.temperature_coefficient = "X7R"
+    input_cap.max_voltage = 25V to 50V
+    input_cap.package = "0805"
+    power_in.hv ~> input_cap ~> power_in.lv
+
+    # --- Output decoupling capacitors ---
+    # Two parallel caps for low impedance and clean output
+    output_caps = new Capacitor[2]
+    for cap in output_caps:
+        cap.capacitance = 22uF +/- 20%
+        cap.temperature_coefficient = "X7R"
+        cap.max_voltage = 10V to 50V
+        cap.package = "0805"
+
+    for cap in output_caps:
+        power_out.hv ~> cap ~> power_out.lv
+
+    # --- Feedback resistor divider ---
+    # Vout = Vref * (1 + R_top / R_bottom), Vref = 1.25V
+    r_top = new Resistor
+    r_top.package = "R0402"
+
+    r_bottom = new Resistor
+    r_bottom.resistance = 10kohm +/- 1%
+    r_bottom.package = "R0402"
+
+    # Wire divider: VOUT -> R_top -> Adj -> R_bottom -> GND
+    power_out.hv ~> r_top ~> package.Adj
+    package.Adj ~> r_bottom ~> power_out.lv
+
+    # --- Power connections ---
+    power_in.hv ~ package.VIN
+    power_in.lv ~ package.GND
+    power_out.hv ~ package.Vout
+    power_out.lv ~ package.GND
+
+    # Exposed pad to ground for thermal dissipation
+    package.EP ~ package.GND
+
+    # --- Enable pullup resistor (default-on) ---
+    enable_pullup = new Resistor
+    enable_pullup.resistance = 10kohm +/- 5%
+    enable_pullup.package = "R0402"
+    power_in.hv ~> enable_pullup ~> package.Enable
+
+    # --- Control connections ---
+    enable.line ~ package.Enable
+    enable.reference ~ power_in
+
+    # --- Shared reference trait ---
+    trait has_single_electric_reference<ground_only=True>
+
+module NCP5663_7V from NCP5663:
+    """8.6V to 7V LDO: R_top=46k, R_bottom=10k
+    Vout = 1.25 * (1 + 46k/10k) = 7.0V"""
+    r_top.resistance = 46kohm +/- 1%
+
+module NCP5663_5V from NCP5663:
+    """7V to 5V LDO: R_top=30k, R_bottom=10k
+    Vout = 1.25 * (1 + 30k/10k) = 5.0V"""
+    r_top.resistance = 30kohm +/- 1%

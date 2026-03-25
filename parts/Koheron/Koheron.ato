@@ -1,0 +1,43 @@
+#pragma experiment("TRAITS")
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+
+component Koheron_package:
+    trait is_atomic_part<manufacturer="Koheron", partnumber="CTL200", footprint="TsKoheronModel_ViasandDrillHolesFootprint-Footprint-1.kicad_mod", symbol="Koheron.kicad_sym:TsKoheronModel">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="N/A", manufacturer="Koheron", partno="CTL200">
+    trait has_designator_prefix<prefix="J">
+
+    # Ground pins
+    signal gnd1 ~ pin "GND1"
+    signal gnd2 ~ pin "GND2"
+    signal gnd3 ~ pin "GND3"
+    signal gnd4 ~ pin "GND4"
+    signal gnd5 ~ pin "GND5"
+    signal gnd6 ~ pin "GND6"
+    signal gnd7 ~ pin "GND7"
+
+    # Laser diode
+    signal ld_p ~ pin "LD+"
+    signal ld_n ~ pin "LD-"
+
+    # Photodiode
+    signal pd_p ~ pin "PD+"
+    signal pd_n ~ pin "PD-"
+
+    # Voltage laser
+    signal vl_p ~ pin "VL+"
+    signal vl_n ~ pin "VL-"
+
+    # Thermistor
+    signal th_p ~ pin "TH+"
+    signal th_n ~ pin "TH-"
+
+    # TEC (Peltier)
+    signal tec_p1 ~ pin "TEC+1"
+    signal tec_p2 ~ pin "TEC+2"
+    signal tec_n1 ~ pin "TEC-1"
+    signal tec_n2 ~ pin "TEC-2"
+
+    # Supply voltage
+    signal vs ~ pin "VS"

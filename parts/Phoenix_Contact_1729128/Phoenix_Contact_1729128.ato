@@ -1,0 +1,20 @@
+#pragma experiment("TRAITS")
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component Phoenix_Contact_1729128_package:
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C7509570", date="2026-03-25T01:16:25.522680+00:00", checksum="b01f3b8081ab2d915572159c81afe33f5b6675933ad53d0ca0298b3b05ca23f4">
+
+    trait is_atomic_part<manufacturer="Phoenix Contact", partnumber="1729128", footprint="CONN-TH_2P-P5.08_1729128.kicad_mod", symbol="1729128.kicad_sym", model="CONN-TH_2P-P5.08_1729128.STEP">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C7509570", manufacturer="Phoenix Contact", partno="1729128">
+    trait has_designator_prefix<prefix="CN">
+    trait has_datasheet<datasheet="https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2308161643_Phoenix-Contact-1729128_C7509570.pdf">
+
+    # pins
+    pin 1
+    pin 2

@@ -1,0 +1,20 @@
+#pragma experiment("TRAITS")
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component Viking_Tech_ARG02BTC4642_package:
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C2683025", date="2026-03-24T22:16:38.644598+00:00", checksum="1ad4c0c98a9c92ef1c057678b3e9b73f2d3b29d9f5182721b1f8f6f311aa0a4e">
+
+    trait is_atomic_part<manufacturer="Viking Tech", partnumber="ARG02BTC4642", footprint="R0402.kicad_mod", symbol="ARG02BTC4642.kicad_sym", model="R0402_L1.0-W0.5-H0.4.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C2683025", manufacturer="Viking Tech", partno="ARG02BTC4642">
+    trait has_designator_prefix<prefix="U">
+    trait has_datasheet<datasheet="https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_Viking-Tech-ARG02BTC4642_C2683025.pdf">
+
+    # pins
+    pin 1
+    pin 2

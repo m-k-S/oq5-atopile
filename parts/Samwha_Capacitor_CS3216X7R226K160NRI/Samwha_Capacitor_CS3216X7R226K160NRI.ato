@@ -1,0 +1,20 @@
+#pragma experiment("TRAITS")
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component Samwha_Capacitor_CS3216X7R226K160NRI_package:
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C5252682", date="2026-03-24T22:10:02.402402+00:00", checksum="a95a3a0a88cafd15e3a57ee709a057983e8b350212d3e94315c037bb905974c4">
+
+    trait is_atomic_part<manufacturer="Samwha Capacitor", partnumber="CS3216X7R226K160NRI", footprint="C1206.kicad_mod", symbol="CS3216X7R226K160NRI.kicad_sym", model="C1206_L3.2-W1.6-H1.3.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C5252682", manufacturer="Samwha Capacitor", partno="CS3216X7R226K160NRI">
+    trait has_designator_prefix<prefix="C">
+    trait has_datasheet<datasheet="https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2211101800_Samwha-Capacitor-CS3216X7R226K160NRI_C5252682.pdf">
+
+    # pins
+    pin 1
+    pin 2

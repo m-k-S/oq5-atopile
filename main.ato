@@ -1,7 +1,73 @@
-"""Brand new atopile project!"""
+"""OpenQuantum V5 Power Supply"""
 
-from "atopile/ti-tpsm863257/ti-tpsm863257.ato" import TPSM863257
-from "parts/onsemi_NCP5663DSADJR4G/onsemi_NCP5663DSADJR4G.ato" import onsemi_NCP5663DSADJR4G_package
+#pragma experiment("BRIDGE_CONNECT")
+
+from "ti-tpsm863252.ato" import TPSM863252_8V6
+from "ti-tpsm863252.ato" import TPSM863252_7V
+from "ncp5663.ato" import NCP5663_7V
+from "ncp5663.ato" import NCP5663_5V
+from "koheron.ato" import KoheronLaserDriver
+
+import ElectricPower
 
 module App:
-    pass
+    # Input power: 15V supply
+    power_15v = new ElectricPower
+    power_15v.voltage = 15V +/- 5%
+
+    # === Channel 1: 15V -> 8.6V -> 7V (clean 7V) ===
+    buck_7v = new TPSM863252_8V6
+    power_8v6 = new ElectricPower
+    power_8v6.voltage = 8.6V +/- 3%
+
+    power_15v ~> buck_7v ~> power_8v6
+
+    ldo_7v = new NCP5663_7V
+    power_7v = new ElectricPower
+    power_7v.voltage = 7V +/- 2%
+
+    power_8v6 ~> ldo_7v ~> power_7v
+
+    # === Channel 2: 15V -> 7V -> 5V (5V_RedPitaya) ===
+    buck_redpitaya = new TPSM863252_7V
+    power_7v_redpitaya = new ElectricPower
+    power_7v_redpitaya.voltage = 7V +/- 3%
+
+    power_15v ~> buck_redpitaya ~> power_7v_redpitaya
+
+    ldo_redpitaya = new NCP5663_5V
+    power_5v_redpitaya = new ElectricPower
+    power_5v_redpitaya.voltage = 5V +/- 2%
+
+    power_7v_redpitaya ~> ldo_redpitaya ~> power_5v_redpitaya
+
+    # === Channel 3: 15V -> 7V -> 5V (5V_VCO) ===
+    buck_vco = new TPSM863252_7V
+    power_7v_vco = new ElectricPower
+    power_7v_vco.voltage = 7V +/- 3%
+
+    power_15v ~> buck_vco ~> power_7v_vco
+
+    ldo_vco = new NCP5663_5V
+    power_5v_vco = new ElectricPower
+    power_5v_vco.voltage = 5V +/- 2%
+
+    power_7v_vco ~> ldo_vco ~> power_5v_vco
+
+    # === Koheron CTL200 Laser Driver ===
+    koheron = new KoheronLaserDriver
+
+    # VS powered from the clean 7V rail (Channel 1)
+    power_7v ~ koheron.power
+
+    # Laser diode signals
+    signal ld_p ~ koheron.ld_p
+    signal ld_n ~ koheron.ld_n
+
+    # Peltier (TEC) signals
+    signal pelt_p ~ koheron.tec_p
+    signal pelt_n ~ koheron.tec_n
+
+    # Thermistor signals
+    signal th_p ~ koheron.th_p
+    signal th_n ~ koheron.th_n

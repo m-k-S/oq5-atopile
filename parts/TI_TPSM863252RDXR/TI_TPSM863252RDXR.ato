@@ -1,0 +1,25 @@
+#pragma experiment("TRAITS")
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component TI_TPSM863252RDXR_package:
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C19632640", date="2026-03-24T22:02:23.969211+00:00", checksum="81191a695c61596bd89049ee94319093f698fb1270aba978b91a27e3fe4005ce">
+
+    trait is_atomic_part<manufacturer="TI", partnumber="TPSM863252RDXR", footprint="QFN-7_L4.0-W3.3_TPSM863257RDXR.kicad_mod", symbol="TPSM863252RDXR.kicad_sym", model="QFN-7_L4.0-W3.3_TPSM863257RDXR.STEP">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C19632640", manufacturer="TI", partno="TPSM863252RDXR">
+    trait has_designator_prefix<prefix="U">
+    trait has_datasheet<datasheet="https://www.ti.com/lit/ds/symlink/tpsm863252.pdf?ts=1702264066990">
+
+    # pins
+    signal EN ~ pin 6
+    signal FB ~ pin 7
+    signal PG ~ pin 5
+    signal PGND ~ pin 4
+    signal SW ~ pin 2
+    signal VIN ~ pin 1
+    signal VOUT ~ pin 3

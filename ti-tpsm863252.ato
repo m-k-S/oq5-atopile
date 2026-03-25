@@ -1,0 +1,101 @@
+#pragma experiment("MODULE_TEMPLATING")
+#pragma experiment("FOR_LOOP")
+#pragma experiment("BRIDGE_CONNECT")
+#pragma experiment("TRAITS")
+
+import Capacitor
+import Resistor
+import Regulator
+import ElectricPower
+import ElectricLogic
+import has_single_electric_reference
+
+from "parts/TI_TPSM863252RDXR/TI_TPSM863252RDXR.ato" import TI_TPSM863252RDXR_package
+
+module TPSM863252 from Regulator:
+    """
+    TI TPSM863252 Synchronous Buck Module
+    3V to 17V input, 0.6V to 10V output, up to 3A
+    Eco-mode for high light-load efficiency
+    Integrated inductor and MOSFETs
+    """
+
+    # --- Parameters ---
+    assert power_in.voltage within 3V to 17V
+    assert power_out.voltage within 0.6V to 10V
+    assert power_out.max_current <= 3A
+    assert power_in.voltage >= power_out.voltage
+
+    # --- External interfaces ---
+    enable = new ElectricLogic
+    power_good = new ElectricLogic
+
+    # --- Package ---
+    package = new TI_TPSM863252RDXR_package
+
+    # --- Input decoupling capacitors ---
+    input_caps = new Capacitor[2]
+    for cap in input_caps:
+        cap.capacitance = 10uF +/- 20%
+        cap.temperature_coefficient = "X7R"
+        cap.max_voltage = 25V to 50V
+        cap.package = "0805"
+
+    for cap in input_caps:
+        power_in.hv ~> cap ~> power_in.lv
+
+    # --- Output decoupling capacitors ---
+    output_caps = new Capacitor[2]
+    for cap in output_caps:
+        cap.capacitance = 22uF +/- 20%
+        cap.temperature_coefficient = "X7R"
+        cap.max_voltage = 16V to 50V
+        cap.package = "1206"
+
+    for cap in output_caps:
+        power_out.hv ~> cap ~> power_out.lv
+
+    # --- Feedback resistor divider ---
+    # Vout = Vref * (1 + R_top / R_bottom), Vref = 0.6V
+    r_top = new Resistor
+    r_top.package = "R0402"
+
+    r_bottom = new Resistor
+    r_bottom.resistance = 10kohm +/- 1%
+    r_bottom.package = "R0402"
+
+    # Wire divider: VOUT -> R_top -> FB -> R_bottom -> GND
+    power_out.hv ~> r_top ~> package.FB
+    package.FB ~> r_bottom ~> power_out.lv
+
+    # --- Power connections ---
+    power_in.hv ~ package.VIN
+    power_in.lv ~ package.PGND
+    power_out.hv ~ package.VOUT
+    power_out.lv ~ package.PGND
+
+    # --- Enable pullup resistor ---
+    enable_pullup = new Resistor
+    enable_pullup.resistance = 10kohm +/- 5%
+    enable_pullup.package = "R0402"
+    power_in.hv ~> enable_pullup ~> package.EN
+
+    # --- Control connections ---
+    enable.line ~ package.EN
+    enable.reference ~ power_in
+
+    power_good.line ~ package.PG
+    power_good.reference ~ power_out
+
+    # --- Shared reference trait ---
+    trait has_single_electric_reference<ground_only=True>
+
+module TPSM863252_8V6 from TPSM863252:
+    """15V to 8.6V buck: R_top=133k, R_bottom=10k
+    Vout = 0.6 * (1 + 133k/10k) = 8.58V"""
+    r_top.resistance = 133kohm +/- 1%
+
+module TPSM863252_7V from TPSM863252:
+    """15V to 7V buck: R_top=107k, R_bottom=10k
+    Vout = 0.6 * (1 + 107k/10k) = 7.02V"""
+    r_top.resistance = 107kohm +/- 1%

@@ -1,0 +1,58 @@
+#pragma experiment("BRIDGE_CONNECT")
+#pragma experiment("TRAITS")
+
+import ElectricPower
+import ElectricSignal
+import has_single_electric_reference
+
+from "parts/Koheron/Koheron.ato" import Koheron_package
+
+module KoheronLaserDriver:
+    """
+    Koheron CTL200 Digital Laser Controller
+    Connections for laser diode, TEC, thermistor, and power.
+    """
+
+    # --- Interfaces ---
+    power = new ElectricPower
+
+    signal ld_p
+    signal ld_n
+    signal tec_p
+    signal tec_n
+    signal th_p
+    signal th_n
+
+    # --- Package ---
+    package = new Koheron_package
+
+    # --- GND connections ---
+    power.lv ~ package.gnd1
+    power.lv ~ package.gnd2
+    power.lv ~ package.gnd3
+    power.lv ~ package.gnd4
+    power.lv ~ package.gnd5
+    power.lv ~ package.gnd6
+    power.lv ~ package.gnd7
+
+    # --- Power supply (VS) ---
+    power.hv ~ package.vs
+
+    # --- Laser diode ---
+    ld_p ~ package.ld_p
+    ld_n ~ package.ld_n
+
+    # --- TEC (Peltier) ---
+    tec_p ~ package.tec_p1
+    tec_p ~ package.tec_p2
+    tec_n ~ package.tec_n1
+    tec_n ~ package.tec_n2
+
+    # --- Thermistor ---
+    th_p ~ package.th_p
+    th_n ~ package.th_n
+
+    # --- PD+, PD-, VL+, VL- left unconnected ---
+
+    # --- Shared reference trait ---
+    trait has_single_electric_reference<ground_only=True>

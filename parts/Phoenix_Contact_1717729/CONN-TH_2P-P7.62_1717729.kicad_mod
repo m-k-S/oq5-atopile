@@ -1,0 +1,150 @@
+(footprint "Phoenix_Contact_1717729:CONN-TH_2P-P7.62_1717729"
+	(version 20241229)
+	(generator "faebryk_convert")
+	(generator_version "v5")
+	(layer "F.Cu")
+	(tedit "5DC5F6A4")
+	(uuid "2032f704-7499-4d0e-b9c5-1f88e712d7db")
+	(property "Reference" "REF**"
+		(at 0 -4)
+		(layer "F.SilkS")
+		(uuid "96e4366e-8938-4aa9-a006-5d4fb0f90d33")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "CONN-TH_2P-P7.62_1717729"
+		(at 0 4)
+		(layer "F.Fab")
+		(uuid "08b0699a-073e-40f4-bf2b-46a66706c7a6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center -3.81 0)
+		(end -3.46 0)
+		(stroke
+			(width 0.7)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(locked no)
+		(uuid "2d97027a-d8c1-4cf1-85f5-505f0ae91e63")
+	)
+	(fp_circle
+		(center 3.81 0)
+		(end 4.16 0)
+		(stroke
+			(width 0.7)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(locked no)
+		(uuid "a1e13da4-7314-4acd-87d8-16b91a0469eb")
+	)
+	(fp_circle
+		(center -7.75 4.73)
+		(end -7.72 4.73)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(locked no)
+		(uuid "4495f299-cf7f-447d-be7d-88300a9cdd46")
+	)
+	(fp_line
+		(start -7.62 4.6)
+		(end 7.62 4.6)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "bde381ef-5055-4219-a908-c604286210cd")
+	)
+	(fp_line
+		(start 7.62 4.57)
+		(end 7.62 -5.23)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "8608e869-88fd-4d8f-9896-201cbac6139b")
+	)
+	(fp_line
+		(start -7.62 4.57)
+		(end -7.62 -5.23)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "5f4ea410-6b17-4d57-b248-ae1417a1b7b7")
+	)
+	(fp_line
+		(start -7.62 -5.23)
+		(end 7.62 -5.23)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "990d230a-8295-462c-b94a-7c06252be82b")
+	)
+	(fp_line
+		(start -7.62 3.81)
+		(end 7.62 3.81)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "7ac276c4-6419-4f7a-a528-cba129167b3e")
+	)
+	(pad "1" thru_hole circle
+		(at -3.81 0 0)
+		(size 2.5 2.5)
+		(drill 1.5999968)
+		(layers "*.Cu" "*.Mask")
+		(uuid "ef71172b-3513-498c-b4fb-c9b100806e7c")
+	)
+	(pad "2" thru_hole circle
+		(at 3.81 0 0)
+		(size 2.5 2.5)
+		(drill 1.5999968)
+		(layers "*.Cu" "*.Mask")
+		(uuid "5a1d821a-2cbf-4674-afb5-ee71ded56bcd")
+	)
+	(model "${KIPRJMOD}/../../parts/Phoenix_Contact_1717729/CONN-TH_2P-P7.62_1717729.step"
+		(offset
+			(xyz -0 0.32 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(embedded_fonts no)
+)
