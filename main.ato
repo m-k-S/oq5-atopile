@@ -14,6 +14,7 @@ from "parts/RFENABLE/RFENABLE.ato" import RFENABLE_package
 from "parts/VTUNE/VTUNE.ato" import VTUNE_package
 from "bias_tee.ato" import BiasTee
 from "parts/BAT_WIRELESS_BWSMA_KE_Z001/BAT_WIRELESS_BWSMA_KE_Z001.ato" import BAT_WIRELESS_BWSMA_KE_Z001_package
+from "lc_pi_filter.ato" import LCPiFilter
 
 import ElectricPower
 
@@ -81,8 +82,14 @@ module App:
 
     # === 15V Input Terminal (Phoenix 1717729, 7.62mm pitch) ===
     j_15v_in = new Phoenix_Contact_1717729_package
-    j_15v_in.p1 ~ power_15v.hv
-    j_15v_in.p2 ~ power_15v.lv
+    power_15v_raw = new ElectricPower
+    power_15v_raw.voltage = 15V +/- 5%
+    j_15v_in.p1 ~ power_15v_raw.hv
+    j_15v_in.p2 ~ power_15v_raw.lv
+
+    # LC pi filter on 15V input
+    filter_15v = new LCPiFilter
+    power_15v_raw ~> filter_15v ~> power_15v
 
     # === DPS5005 Output Terminals (Phoenix 1729128, 5.08mm pitch) ===
     j_dps5005_1 = new Phoenix_Contact_1729128_package
@@ -93,9 +100,14 @@ module App:
     signal dps5005_2 ~ j_dps5005_2.p1
     j_dps5005_2.p2 ~ power_15v.lv
 
-    # === 5V RedPitaya Output Terminal (Phoenix 1729128, 5.08mm pitch) ===
+    # === 5V RedPitaya LC pi filter + Output Terminal ===
+    filter_5v_rp = new LCPiFilter
+    power_5v_rp_filtered = new ElectricPower
+    power_5v_rp_filtered.voltage = 5V +/- 3%
+    power_5v_redpitaya ~> filter_5v_rp ~> power_5v_rp_filtered
+
     j_5v_redpitaya = new Phoenix_Contact_1729128_package
-    j_5v_redpitaya.p1 ~ power_5v_redpitaya.hv
+    j_5v_redpitaya.p1 ~ power_5v_rp_filtered.hv
     j_5v_redpitaya.p2 ~ power_15v.lv
 
     # === DB15 Connector (Omron XM3B-1522-502) ===

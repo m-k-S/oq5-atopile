@@ -1,0 +1,20 @@
+#pragma experiment("TRAITS")
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component XR_XRTC322512S100MBCA_package:
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C39846661", date="2026-03-25T20:03:15.041755+00:00", checksum="aacdc93c4b6ed7b73d54391aadf45848a05279259404ddb2cd25fab059102ca0">
+
+    trait is_atomic_part<manufacturer="XR", partnumber="XRTC322512S100MBCA", footprint="IND-SMD_L3.2-W2.5_CKST322512-2.2UH.kicad_mod", symbol="XRTC322512S100MBCA.kicad_sym", model="IND-SMD_L3.2-W2.5_CKST322512-2.2UH.STEP">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C39846661", manufacturer="XR", partno="XRTC322512S100MBCA">
+    trait has_designator_prefix<prefix="L">
+    trait has_datasheet<datasheet="https://www.lcsc.com/datasheet/lcsc_datasheet_2410121730_XR-XRTC322512S100MBCA_C39846661.pdf">
+
+    # pins
+    pin 2
+    pin 1

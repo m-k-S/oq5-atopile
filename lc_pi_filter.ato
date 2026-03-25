@@ -1,0 +1,63 @@
+#pragma experiment("MODULE_TEMPLATING")
+#pragma experiment("FOR_LOOP")
+#pragma experiment("BRIDGE_CONNECT")
+#pragma experiment("TRAITS")
+
+import Capacitor
+import Inductor
+import Regulator
+import has_single_electric_reference
+
+module LCPiFilter from Regulator:
+    """
+    LC pi filter for power rail filtering.
+    Topology: C1 -> L -> C2, with HF bypass caps.
+    Cutoff ~16kHz (10uH + 10uF), -40dB/decade rolloff.
+    """
+
+    # --- Inductor ---
+    l = new Inductor
+    l.inductance = 10uH +/- 20%
+    l.package = "1210"
+
+    # --- Input capacitors (C1) ---
+    # Bulk ceramic
+    c1_bulk = new Capacitor
+    c1_bulk.capacitance = 10uF +/- 20%
+    c1_bulk.temperature_coefficient = "X7R"
+    c1_bulk.package = "0805"
+
+    # HF bypass
+    c1_hf = new Capacitor
+    c1_hf.capacitance = 100nF +/- 10%
+    c1_hf.package = "0402"
+
+    # --- Output capacitors (C2) ---
+    # Bulk ceramic
+    c2_bulk = new Capacitor
+    c2_bulk.capacitance = 10uF +/- 20%
+    c2_bulk.temperature_coefficient = "X7R"
+    c2_bulk.package = "0805"
+
+    # HF bypass
+    c2_hf = new Capacitor
+    c2_hf.capacitance = 100nF +/- 10%
+    c2_hf.package = "0402"
+
+    # --- Wiring ---
+    # Input side caps
+    power_in.hv ~> c1_bulk ~> power_in.lv
+    power_in.hv ~> c1_hf ~> power_in.lv
+
+    # Series inductor
+    power_in.hv ~> l ~> power_out.hv
+
+    # Output side caps
+    power_out.hv ~> c2_bulk ~> power_out.lv
+    power_out.hv ~> c2_hf ~> power_out.lv
+
+    # Ground continuity
+    power_in.lv ~ power_out.lv
+
+    # --- Shared reference trait ---
+    trait has_single_electric_reference<ground_only=True>

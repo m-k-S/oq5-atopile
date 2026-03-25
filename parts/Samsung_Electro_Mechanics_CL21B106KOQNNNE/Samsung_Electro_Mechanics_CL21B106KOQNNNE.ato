@@ -1,0 +1,20 @@
+#pragma experiment("TRAITS")
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component Samsung_Electro_Mechanics_CL21B106KOQNNNE_package:
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C95841", date="2026-03-25T20:03:17.396606+00:00", checksum="8149c196bbfbe3bcbeae61e2817e3f4e41a5bf9bad86369eaac0dfae7ec6c781">
+
+    trait is_atomic_part<manufacturer="Samsung Electro-Mechanics", partnumber="CL21B106KOQNNNE", footprint="C0805.kicad_mod", symbol="CL21B106KOQNNNE.kicad_sym", model="C0805_L2.0-W1.3-H1.3.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C95841", manufacturer="Samsung Electro-Mechanics", partno="CL21B106KOQNNNE">
+    trait has_designator_prefix<prefix="C">
+    trait has_datasheet<datasheet="https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL21B106KOQNNNE_C95841.pdf">
+
+    # pins
+    pin 1
+    pin 2
