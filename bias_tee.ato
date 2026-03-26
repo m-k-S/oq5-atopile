@@ -18,16 +18,15 @@ module BiasTee:
     signal output
 
     # DC path: inductor (RF choke)
-    # 100uH provides ~31 ohm impedance at 50kHz
-    # SMD 1210 package for good SRF (typically 10-20MHz)
+    # 470uH provides ~148 ohm impedance at 50kHz
     l = new Inductor
-    l.inductance = 100uH +/- 20%
-    l.package = "1210"
+    l.inductance = 470uH +/- 20%
 
     # AC path: coupling capacitor
     # 100nF gives f_low = 1/(2*pi*50*100nF) ~ 32kHz
     c = new Capacitor
     c.capacitance = 100nF +/- 10%
+    c.max_voltage = 16V to 50V
     c.package = "0603"
 
     # Wiring: DC and RF combine at output

@@ -93,11 +93,11 @@ module App:
 
     # === DPS5005 Output Terminals (Phoenix 1729128, 5.08mm pitch) ===
     j_dps5005_1 = new Phoenix_Contact_1729128_package
-    signal dps5005_1 ~ j_dps5005_1.p1
+    j_dps5005_1.p1 ~ power_15v.hv
     j_dps5005_1.p2 ~ power_15v.lv
 
     j_dps5005_2 = new Phoenix_Contact_1729128_package
-    signal dps5005_2 ~ j_dps5005_2.p1
+    j_dps5005_2.p1 ~ power_15v.hv
     j_dps5005_2.p2 ~ power_15v.lv
 
     # === 5V RedPitaya LC pi filter + Output Terminal ===
